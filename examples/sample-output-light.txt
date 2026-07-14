@@ -1,0 +1,84 @@
+╔════════════════════════════════════════════════════════════╗
+║  电脑体检报告                                         ║
+║  Mode: LIGHT                                                ║
+║  Host: spark-44a8                                           ║
+║  Time: 2026-07-14 09:51:56 CST                              ║
+╚════════════════════════════════════════════════════════════╝
+
+
+━━━ CPU 与负载 ━━━
+OS:      Ubuntu 24.04.4 LTS  Kernel: 6.17.0-1021-nvidia
+Arch:    aarch64   Uptime: up 1 day, 9 hours, 44 minutes
+Hostname:spark-44a8
+
+CPU:     Cortex-A725 Cortex-X925
+Cores:   20 logical / 10 physical (1 socket × 10 cores)
+Load:    1m=0.52  5m=0.46  15m=0.50   (cores=20)
+✅ Load is normal
+
+━━━ 内存与交换 ━━━
+               total        used        free      shared  buff/cache   available
+Mem:           121Gi       113Gi       3.8Gi       117Mi       6.3Gi       8.3Gi
+Swap:           15Gi       5.2Gi        10Gi
+⚠️  Memory usage 93% — high
+ℹ️  Swap usage 32%
+
+━━━ 磁盘与文件系统 ━━━
+Filesystem      Size  Used Avail Use% Mounted on
+efivarfs        256K   20K  237K   8% /sys/firmware/efi/efivars
+/dev/nvme0n1p2  3.7T  588G  3.0T  17% /
+/dev/nvme0n1p1  298M  6.4M  292M   3% /boot/efi
+
+
+━━━ 高占用进程 ━━━
+Top 5 by CPU:
+    PID USER     %CPU %MEM COMMAND
+1143306 lab434   14.2  0.0 bash
+ 798370 root      3.4  1.3 VLLM::EngineCor
+   1710 root      2.1  0.0 sunloginclient
+1133438 lab434    2.0  0.3 claude
+    528 root      1.7  0.0 plymouthd
+
+Top 5 by MEM:
+    PID USER     %CPU %MEM COMMAND
+   3554 7474      0.8  2.4 java
+ 798370 root      3.4  1.3 VLLM::EngineCor
+ 797986 root      0.1  0.9 vllm
+   3375 root      0.1  0.4 uvicorn
+1133438 lab434    2.0  0.3 claude
+
+━━━ 网络 ━━━
+Interfaces:
+lo               UNKNOWN        127.0.0.1/8 ::1/128 
+enP7s7           DOWN           
+enx00e04c381c68  DOWN           
+wlP9s9           UP             10.193.129.211/16 fe80::8336:ed7c:1909:dbeb/64 
+br-a2360924b1a8  UP             172.20.0.1/16 fe80::6c80:72ff:feb9:bf2c/64 
+br-c17ff619b1c1  UP             172.18.0.1/16 fe80::c0b9:7aff:feaa:f318/64 
+br-f8a1b4968148  DOWN           172.21.0.1/16 
+docker0          DOWN           172.17.0.1/16 
+br-3113981a3cf1  UP             172.19.0.1/16 fe80::98a6:77ff:fedf:c5e6/64 
+veth81f8d48@if2  UP             fe80::c85c:2cff:fe50:ebd7/64 
+veth149ceac@if2  UP             fe80::ccf2:3dff:fe97:d4ed/64 
+veth6a6c6ce@if2  UP             fe80::141c:a3ff:fe71:4c1e/64 
+
+Routes:
+default via 10.193.0.1 dev wlP9s9 proto dhcp src 10.193.129.211 metric 600 
+
+Connectivity:
+✅ Internet reachable (1.1.1.1)
+ℹ️  25 TCP ports in LISTEN state
+
+━━━ 失败的服务 ━━━
+❌ 2 failed systemd units:
+* fwupd-refresh.service loaded failed failed Refresh fwupd metadata and update motd
+* fwupd.service         loaded failed failed Firmware update daemon
+
+━━━ 汇总 ━━━
+❌ 整体状态: CRITICAL  (1 critical, 1 warnings)
+
+❌ 建议 (CRITICAL):
+  • 2 failed systemd units
+
+⚠️  建议 (WARNING):
+  • Memory usage 93% (>=80%)

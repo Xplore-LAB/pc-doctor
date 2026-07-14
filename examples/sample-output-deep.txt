@@ -1,0 +1,346 @@
+╔════════════════════════════════════════════════════════════╗
+║  电脑体检报告                                         ║
+║  Mode: DEEP                                                 ║
+║  Host: spark-44a8                                           ║
+║  Time: 2026-07-14 09:51:57 CST                              ║
+╚════════════════════════════════════════════════════════════╝
+
+
+━━━ CPU 与负载 ━━━
+OS:      Ubuntu 24.04.4 LTS  Kernel: 6.17.0-1021-nvidia
+Arch:    aarch64   Uptime: up 1 day, 9 hours, 44 minutes
+Hostname:spark-44a8
+Booted:  Jul 13
+
+  Architecture:                            aarch64
+  CPU(s):                                  20
+  Vendor ID:                               ARM
+  Model name:                              Cortex-X925
+  Thread(s) per core:                      1
+  Core(s) per socket:                      10
+  Socket(s):                               1
+  CPU(s) scaling MHz:                      100%
+  CPU max MHz:                             3900.0000
+  Flags:                                   fp asimd evtstrm aes pmull sha1 sha2 crc32 atomics fphp asimdhp cpuid asimdrdm jscvt fcma lrcpc dcpop sha3 sm3 sm4 asimddp sha512 sve asimdfhm dit uscat ilrcpc flagm sb paca pacg dcpodp sve2 sveaes svepmull svebitperm svesha3 svesm4 flagm2 frint svei8mm svebf16 i8mm bf16 dgh bti ecv afp wfxt
+  Model name:                              Cortex-A725
+  Thread(s) per core:                      1
+  Core(s) per socket:                      10
+  Socket(s):                               1
+  CPU(s) scaling MHz:                      100%
+  CPU max MHz:                             2808.0000
+  Flags:                                   fp asimd evtstrm aes pmull sha1 sha2 crc32 atomics fphp asimdhp cpuid asimdrdm jscvt fcma lrcpc dcpop sha3 sm3 sm4 asimddp sha512 sve asimdfhm dit uscat ilrcpc flagm sb paca pacg dcpodp sve2 sveaes svepmull svebitperm svesha3 svesm4 flagm2 frint svei8mm svebf16 i8mm bf16 dgh bti ecv afp wfxt
+
+Load:    1m=0.52  5m=0.46  15m=0.50   (cores=20)
+✅ Load normal
+
+mpstat (1s sample):
+09:51:58     all    0.30    0.00    0.35    0.00    0.00    0.05    0.00    0.00    0.00   99.30
+09:51:58       0    0.00    0.00    0.00    0.00    0.00    1.00    0.00    0.00    0.00   99.00
+09:51:58       1    0.00    0.00    0.00    0.00    0.00    0.00    0.00    0.00    0.00  100.00
+09:51:58       2    0.00    0.00    0.00    0.00    0.00    0.00    0.00    0.00    0.00  100.00
+09:51:58       3    0.00    0.00    1.00    0.00    0.00    0.00    0.00    0.00    0.00   99.00
+09:51:58       4    0.00    0.00    0.00    0.00    0.00    0.00    0.00    0.00    0.00  100.00
+09:51:58       5    1.00    0.00    0.00    0.00    0.00    0.00    0.00    0.00    0.00   99.00
+09:51:58       6    0.00    0.00    1.00    0.00    0.00    0.00    0.00    0.00    0.00   99.00
+09:51:58       7    0.00    0.00    0.00    0.00    0.00    0.00    0.00    0.00    0.00  100.00
+09:51:58       8    0.00    0.00    0.00    0.00    0.00    0.00    0.00    0.00    0.00  100.00
+09:51:58       9    0.00    0.00    1.00    0.00    0.00    0.00    0.00    0.00    0.00   99.00
+09:51:58      10    0.99    0.00    0.99    0.00    0.00    0.00    0.00    0.00    0.00   98.02
+09:51:58      11    0.00    0.00    0.00    0.00    0.00    0.00    0.00    0.00    0.00  100.00
+09:51:58      12    0.99    0.00    0.99    0.00    0.00    0.00    0.00    0.00    0.00   98.02
+09:51:58      13    0.00    0.00    0.00    0.00    0.00    0.00    0.00    0.00    0.00  100.00
+09:51:58      14    0.00    0.00    2.00    0.00    0.00    0.00    0.00    0.00    0.00   98.00
+09:51:58      15    1.01    0.00    0.00    0.00    0.00    0.00    0.00    0.00    0.00   98.99
+09:51:58      16    0.00    0.00    0.00    0.00    0.00    0.00    0.00    0.00    0.00  100.00
+09:51:58      17    0.00    0.00    0.00    0.00    0.00    0.00    0.00    0.00    0.00  100.00
+09:51:58      18    0.00    0.00    0.00    0.00    0.00    0.00    0.00    0.00    0.00  100.00
+09:51:58      19    2.02    0.00    0.00    0.00    0.00    0.00    0.00    0.00    0.00   97.98
+
+Average:     CPU    %usr   %nice    %sys %iowait    %irq   %soft  %steal  %guest  %gnice   %idle
+Average:     all    0.30    0.00    0.35    0.00    0.00    0.05    0.00    0.00    0.00   99.30
+Average:       0    0.00    0.00    0.00    0.00    0.00    1.00    0.00    0.00    0.00   99.00
+Average:       1    0.00    0.00    0.00    0.00    0.00    0.00    0.00    0.00    0.00  100.00
+Average:       2    0.00    0.00    0.00    0.00    0.00    0.00    0.00    0.00    0.00  100.00
+Average:       3    0.00    0.00    1.00    0.00    0.00    0.00    0.00    0.00    0.00   99.00
+Average:       4    0.00    0.00    0.00    0.00    0.00    0.00    0.00    0.00    0.00  100.00
+Average:       5    1.00    0.00    0.00    0.00    0.00    0.00    0.00    0.00    0.00   99.00
+Average:       6    0.00    0.00    1.00    0.00    0.00    0.00    0.00    0.00    0.00   99.00
+Average:       7    0.00    0.00    0.00    0.00    0.00    0.00    0.00    0.00    0.00  100.00
+Average:       8    0.00    0.00    0.00    0.00    0.00    0.00    0.00    0.00    0.00  100.00
+Average:       9    0.00    0.00    1.00    0.00    0.00    0.00    0.00    0.00    0.00   99.00
+Average:      10    0.99    0.00    0.99    0.00    0.00    0.00    0.00    0.00    0.00   98.02
+Average:      11    0.00    0.00    0.00    0.00    0.00    0.00    0.00    0.00    0.00  100.00
+Average:      12    0.99    0.00    0.99    0.00    0.00    0.00    0.00    0.00    0.00   98.02
+Average:      13    0.00    0.00    0.00    0.00    0.00    0.00    0.00    0.00    0.00  100.00
+Average:      14    0.00    0.00    2.00    0.00    0.00    0.00    0.00    0.00    0.00   98.00
+Average:      15    1.01    0.00    0.00    0.00    0.00    0.00    0.00    0.00    0.00   98.99
+Average:      16    0.00    0.00    0.00    0.00    0.00    0.00    0.00    0.00    0.00  100.00
+Average:      17    0.00    0.00    0.00    0.00    0.00    0.00    0.00    0.00    0.00  100.00
+Average:      18    0.00    0.00    0.00    0.00    0.00    0.00    0.00    0.00    0.00  100.00
+Average:      19    2.02    0.00    0.00    0.00    0.00    0.00    0.00    0.00    0.00   97.98
+
+━━━ 内存与交换 ━━━
+               total        used        free      shared  buff/cache   available
+Mem:           121Gi       113Gi       3.8Gi       117Mi       6.3Gi       8.3Gi
+Swap:           15Gi       5.2Gi        10Gi
+⚠️  Memory 93%
+ℹ️  Swap 32%
+
+Hugepages:
+  1048576kB: total=0 free=0
+  2048kB: total=0 free=0
+  32768kB: total=0 free=0
+  64kB: total=0 free=0
+
+━━━ 磁盘与文件系统 ━━━
+Filesystem      Size  Used Avail Use% Mounted on
+efivarfs        256K   20K  237K   8% /sys/firmware/efi/efivars
+/dev/nvme0n1p2  3.7T  588G  3.0T  17% /
+/dev/nvme0n1p1  298M  6.4M  292M   3% /boot/efi
+
+Block devices:
+NAME          SIZE ROTA TYPE MODEL                      MOUNTPOINT                          FSTYPE
+loop0           4K    0 loop                            /snap/bare/5                        squashfs
+loop1         240M    0 loop                            /snap/firefox/8567                  squashfs
+loop2          69M    0 loop                            /snap/core22/2412                   squashfs
+loop3        61.9M    0 loop                            /snap/core24/1644                   squashfs
+loop4       240.2M    0 loop                            /snap/firefox/8593                  squashfs
+loop5        15.6M    0 loop                            /snap/firmware-updater/227          squashfs
+loop6         503M    0 loop                            /snap/gnome-42-2204/245             squashfs
+loop7        10.2M    0 loop                            /snap/firmware-updater/168          squashfs
+loop8       552.9M    0 loop                            /snap/gnome-46-2404/154             squashfs
+loop9        91.7M    0 loop                            /snap/gtk-common-themes/1535        squashfs
+loop10      503.1M    0 loop                            /snap/gnome-42-2204/264             squashfs
+loop11      174.6M    0 loop                            /snap/mesa-2404/1166                squashfs
+loop12       12.2M    0 loop                            /snap/snap-store/1217               squashfs
+loop13         10M    0 loop                            /snap/snap-store/1271               squashfs
+loop14       42.6M    0 loop                            /snap/snapd/26869                   squashfs
+loop15        560K    0 loop                            /snap/snapd-desktop-integration/363 squashfs
+loop16       43.4M    0 loop                            /snap/snapd/27407                   squashfs
+loop17        800K    0 loop                            /snap/snapd-desktop-integration/388 squashfs
+loop18      221.3M    0 loop                            /snap/thunderbird/1137              squashfs
+loop19      221.3M    0 loop                            /snap/thunderbird/1143              squashfs
+sda             0B    0 disk Mass-Storage                                                   
+nvme0n1       3.7T    0 disk SAMSUNG MZALC4T0HBL1-00B07                                     
+|-nvme0n1p1   298M    0 part                            /boot/efi                           vfat
+`-nvme0n1p2   3.7T    0 part                            /                                   ext4
+
+
+━━━ 磁盘 I/O ━━━
+iostat (2s sample):
+loop13           0.00      0.00     0.00   0.00    0.07     8.07    0.00      0.00     0.00   0.00    0.00     0.00    0.00      0.00     0.00   0.00    0.00     0.00    0.00    0.00    0.00   0.00
+loop14           0.00      0.00     0.00   0.00    0.09     8.05    0.00      0.00     0.00   0.00    0.00     0.00    0.00      0.00     0.00   0.00    0.00     0.00    0.00    0.00    0.00   0.00
+loop15           0.00      0.00     0.00   0.00    0.05     2.76    0.00      0.00     0.00   0.00    0.00     0.00    0.00      0.00     0.00   0.00    0.00     0.00    0.00    0.00    0.00   0.00
+loop16           0.02      0.82     0.00   0.00    0.29    40.06    0.00      0.00     0.00   0.00    0.00     0.00    0.00      0.00     0.00   0.00    0.00     0.00    0.00    0.00    0.00   0.00
+loop17           0.00      0.00     0.00   0.00    0.12     9.60    0.00      0.00     0.00   0.00    0.00     0.00    0.00      0.00     0.00   0.00    0.00     0.00    0.00    0.00    0.00   0.00
+loop18           0.00      0.01     0.00   0.00    0.11    19.31    0.00      0.00     0.00   0.00    0.00     0.00    0.00      0.00     0.00   0.00    0.00     0.00    0.00    0.00    0.00   0.00
+loop19           0.00      0.01     0.00   0.00    0.14    17.03    0.00      0.00     0.00   0.00    0.00     0.00    0.00      0.00     0.00   0.00    0.00     0.00    0.00    0.00    0.00   0.00
+loop2            0.00      0.01     0.00   0.00    0.15    18.28    0.00      0.00     0.00   0.00    0.00     0.00    0.00      0.00     0.00   0.00    0.00     0.00    0.00    0.00    0.00   0.00
+loop20           0.00      0.00     0.00   0.00    0.00     1.27    0.00      0.00     0.00   0.00    0.00     0.00    0.00      0.00     0.00   0.00    0.00     0.00    0.00    0.00    0.00   0.00
+loop3            0.01      0.10     0.00   0.00    0.09    12.84    0.00      0.00     0.00   0.00    0.00     0.00    0.00      0.00     0.00   0.00    0.00     0.00    0.00    0.00    0.00   0.00
+loop4            0.00      0.01     0.00   0.00    0.13    18.25    0.00      0.00     0.00   0.00    0.00     0.00    0.00      0.00     0.00   0.00    0.00     0.00    0.00    0.00    0.00   0.00
+loop5            0.00      0.07     0.00   0.00    0.26    26.62    0.00      0.00     0.00   0.00    0.00     0.00    0.00      0.00     0.00   0.00    0.00     0.00    0.00    0.00    0.00   0.00
+loop6            0.00      0.01     0.00   0.00    0.10    21.64    0.00      0.00     0.00   0.00    0.00     0.00    0.00      0.00     0.00   0.00    0.00     0.00    0.00    0.00    0.00   0.00
+loop7            0.00      0.00     0.00   0.00    0.07     8.39    0.00      0.00     0.00   0.00    0.00     0.00    0.00      0.00     0.00   0.00    0.00     0.00    0.00    0.00    0.00   0.00
+loop8            0.01      0.07     0.00   0.00    0.08     9.08    0.00      0.00     0.00   0.00    0.00     0.00    0.00      0.00     0.00   0.00    0.00     0.00    0.00    0.00    0.00   0.00
+loop9            0.00      0.01     0.00   0.00    0.10     7.35    0.00      0.00     0.00   0.00    0.00     0.00    0.00      0.00     0.00   0.00    0.00     0.00    0.00    0.00    0.00   0.00
+nvme0n1         17.48   1188.74     4.46  20.32    0.67    68.00   10.91    430.31    22.48  67.31    3.24    39.43    0.51  27353.76     0.00   0.00    0.98 53932.90    0.88    0.97    0.05   1.08
+
+
+Device            r/s     rkB/s   rrqm/s  %rrqm r_await rareq-sz     w/s     wkB/s   wrqm/s  %wrqm w_await wareq-sz     d/s     dkB/s   drqm/s  %drqm d_await dareq-sz     f/s f_await  aqu-sz  %util
+loop0            0.00      0.00     0.00   0.00    0.00     0.00    0.00      0.00     0.00   0.00    0.00     0.00    0.00      0.00     0.00   0.00    0.00     0.00    0.00    0.00    0.00   0.00
+loop1            0.00      0.00     0.00   0.00    0.00     0.00    0.00      0.00     0.00   0.00    0.00     0.00    0.00      0.00     0.00   0.00    0.00     0.00    0.00    0.00    0.00   0.00
+loop10           0.00      0.00     0.00   0.00    0.00     0.00    0.00      0.00     0.00   0.00    0.00     0.00    0.00      0.00     0.00   0.00    0.00     0.00    0.00    0.00    0.00   0.00
+loop11           0.00      0.00     0.00   0.00    0.00     0.00    0.00      0.00     0.00   0.00    0.00     0.00    0.00      0.00     0.00   0.00    0.00     0.00    0.00    0.00    0.00   0.00
+loop12           0.00      0.00     0.00   0.00    0.00     0.00    0.00      0.00     0.00   0.00    0.00     0.00    0.00      0.00     0.00   0.00    0.00     0.00    0.00    0.00    0.00   0.00
+loop13           0.00      0.00     0.00   0.00    0.00     0.00    0.00      0.00     0.00   0.00    0.00     0.00    0.00      0.00     0.00   0.00    0.00     0.00    0.00    0.00    0.00   0.00
+loop14           0.00      0.00     0.00   0.00    0.00     0.00    0.00      0.00     0.00   0.00    0.00     0.00    0.00      0.00     0.00   0.00    0.00     0.00    0.00    0.00    0.00   0.00
+loop15           0.00      0.00     0.00   0.00    0.00     0.00    0.00      0.00     0.00   0.00    0.00     0.00    0.00      0.00     0.00   0.00    0.00     0.00    0.00    0.00    0.00   0.00
+loop16           0.00      0.00     0.00   0.00    0.00     0.00    0.00      0.00     0.00   0.00    0.00     0.00    0.00      0.00     0.00   0.00    0.00     0.00    0.00    0.00    0.00   0.00
+loop17           0.00      0.00     0.00   0.00    0.00     0.00    0.00      0.00     0.00   0.00    0.00     0.00    0.00      0.00     0.00   0.00    0.00     0.00    0.00    0.00    0.00   0.00
+loop18           0.00      0.00     0.00   0.00    0.00     0.00    0.00      0.00     0.00   0.00    0.00     0.00    0.00      0.00     0.00   0.00    0.00     0.00    0.00    0.00    0.00   0.00
+loop19           0.00      0.00     0.00   0.00    0.00     0.00    0.00      0.00     0.00   0.00    0.00     0.00    0.00      0.00     0.00   0.00    0.00     0.00    0.00    0.00    0.00   0.00
+loop2            0.00      0.00     0.00   0.00    0.00     0.00    0.00      0.00     0.00   0.00    0.00     0.00    0.00      0.00     0.00   0.00    0.00     0.00    0.00    0.00    0.00   0.00
+loop20           0.00      0.00     0.00   0.00    0.00     0.00    0.00      0.00     0.00   0.00    0.00     0.00    0.00      0.00     0.00   0.00    0.00     0.00    0.00    0.00    0.00   0.00
+loop3            0.00      0.00     0.00   0.00    0.00     0.00    0.00      0.00     0.00   0.00    0.00     0.00    0.00      0.00     0.00   0.00    0.00     0.00    0.00    0.00    0.00   0.00
+loop4            0.00      0.00     0.00   0.00    0.00     0.00    0.00      0.00     0.00   0.00    0.00     0.00    0.00      0.00     0.00   0.00    0.00     0.00    0.00    0.00    0.00   0.00
+loop5            0.00      0.00     0.00   0.00    0.00     0.00    0.00      0.00     0.00   0.00    0.00     0.00    0.00      0.00     0.00   0.00    0.00     0.00    0.00    0.00    0.00   0.00
+loop6            0.00      0.00     0.00   0.00    0.00     0.00    0.00      0.00     0.00   0.00    0.00     0.00    0.00      0.00     0.00   0.00    0.00     0.00    0.00    0.00    0.00   0.00
+loop7            0.00      0.00     0.00   0.00    0.00     0.00    0.00      0.00     0.00   0.00    0.00     0.00    0.00      0.00     0.00   0.00    0.00     0.00    0.00    0.00    0.00   0.00
+loop8            0.00      0.00     0.00   0.00    0.00     0.00    0.00      0.00     0.00   0.00    0.00     0.00    0.00      0.00     0.00   0.00    0.00     0.00    0.00    0.00    0.00   0.00
+loop9            0.00      0.00     0.00   0.00    0.00     0.00    0.00      0.00     0.00   0.00    0.00     0.00    0.00      0.00     0.00   0.00    0.00     0.00    0.00    0.00    0.00   0.00
+nvme0n1          0.00      0.00     0.00   0.00    0.00     0.00    1.00     66.00    15.50  93.94    6.50    66.00    0.00      0.00     0.00   0.00    0.00     0.00    0.50    1.00    0.01   0.65
+
+
+
+vmstat (1s sample):
+ 0  0 5426112 3989024 620300 6013060    0    0     0  6968 3534 4918  0  0 99  0  0  0
+
+━━━ 温度与散热 ━━━
+mt7925_phy0-pci-90100
+Adapter: PCI adapter
+temp1:        +47.0 C  
+
+acpitz-acpi-0
+Adapter: ACPI interface
+temp1:        +44.8 C  
+temp2:        +42.8 C  
+temp3:        +42.7 C  
+temp4:        +42.8 C  
+temp5:        +43.0 C  
+temp6:        +44.8 C  
+temp7:        +42.8 C  
+
+nvme-pci-40100
+Adapter: PCI adapter
+Composite:    +40.9 C  (low  = -273.1 C, high = +82.8 C)
+                       (crit = +84.8 C)
+Sensor 1:     +41.9 C  (low  = -273.1 C, high = +65261.8 C)
+Sensor 2:     +40.9 C  (low  = -273.1 C, high = +65261.8 C)
+
+
+GPU (nvidia-smi):
+Format modifier is not recognized.
+(no NVIDIA GPU)
+✅ GPU temperature 43°C
+
+━━━ 磁盘健康 (SMART) ━━━
+── /dev/sda ──
+  (smartctl cannot access this device — likely needs '-d' flag or sudo)
+
+── /dev/nvme0n1 ──
+  (smartctl cannot access this device — likely needs '-d' flag or sudo)
+
+（需 sudo 才能完整检测）
+
+━━━ 启动与日志 ━━━
+Boot performance:
+
+Slowest 5 services:
+1min 5.390s fstrim.service
+    30.630s apt-daily.service
+    30.544s apt-daily-upgrade.service
+     5.693s NetworkManager.service
+     4.512s docker.service
+
+Kernel errors since boot:
+  4485 error/crit messages (16 unique patterns)
+Jul 14 09:50:59 spark-44a8 sudo[1142809]:   lab434 : a password is required ; PWD=/home/lab434/projects/claude-pc-doctor ; USER=root ; COMMAND=/usr/bin/true
+Jul 14 09:51:06 spark-44a8 systemd[1]: Failed to start fwupd.service - Firmware update daemon.
+Jul 14 09:51:10 spark-44a8 sudo[1142947]:   lab434 : a password is required ; PWD=/home/lab434/projects/claude-pc-doctor ; USER=root ; COMMAND=/usr/bin/true
+Jul 14 09:51:31 spark-44a8 systemd[1]: Failed to start fwupd.service - Firmware update daemon.
+Jul 14 09:51:47 spark-44a8 sudo[1143181]:   lab434 : a password is required ; PWD=/home/lab434/projects/claude-pc-doctor ; USER=root ; COMMAND=/usr/bin/true
+Jul 14 09:51:47 spark-44a8 sudo[1143186]:   lab434 : a password is required ; PWD=/home/lab434/projects/claude-pc-doctor ; USER=root ; COMMAND=/usr/bin/true
+Jul 14 09:51:49 spark-44a8 sudo[1143245]:   lab434 : a password is required ; PWD=/home/lab434/projects/claude-pc-doctor ; USER=root ; COMMAND=/usr/bin/true
+Jul 14 09:51:56 spark-44a8 systemd[1]: Failed to start fwupd.service - Firmware update daemon.
+Jul 14 09:52:02 spark-44a8 sudo[1143587]:   lab434 : a password is required ; PWD=/home/lab434/projects/claude-pc-doctor ; USER=root ; COMMAND=/usr/bin/true
+Jul 14 09:52:02 spark-44a8 sudo[1143592]:   lab434 : a password is required ; PWD=/home/lab434/projects/claude-pc-doctor ; USER=root ; COMMAND=/usr/bin/true
+
+━━━ 近期崩溃/OOM ━━━
+Last 5 OOM events:
+
+Last 5 segfaults / kernel panics:
+
+Crash dump files:
+-rw-r----- 1 lab434 root 19K Jul 13 09:58 /var/crash/_usr_bin_python3.12.1000.crash
+⚠️  1 crash dump(s) in /var/crash
+
+━━━ 安全与端口 ━━━
+Listening TCP ports:
+State  Recv-Q Send-Q Local Address:Port  Peer Address:PortProcess                                  
+LISTEN 0      4096         0.0.0.0:7474       0.0.0.0:*                                            
+LISTEN 0      4096         0.0.0.0:7687       0.0.0.0:*                                            
+LISTEN 0      4096         0.0.0.0:8000       0.0.0.0:*                                            
+LISTEN 0      4096         0.0.0.0:22         0.0.0.0:*                                            
+LISTEN 0      4096      127.0.0.54:53         0.0.0.0:*                                            
+LISTEN 0      5            0.0.0.0:8765       0.0.0.0:*    users:(("python3",pid=2634,fd=3))       
+LISTEN 0      4096         0.0.0.0:11434      0.0.0.0:*                                            
+LISTEN 0      4096   127.0.0.53%lo:53         0.0.0.0:*                                            
+LISTEN 0      511        127.0.0.1:18789      0.0.0.0:*    users:(("MainThread",pid=1136088,fd=27))
+LISTEN 0      4096       127.0.0.1:16308      0.0.0.0:*                                            
+LISTEN 0      4096       127.0.0.1:16090      0.0.0.0:*                                            
+LISTEN 0      4096       127.0.0.1:16067      0.0.0.0:*                                            
+LISTEN 0      4096       127.0.0.1:11000      0.0.0.0:*                                            
+LISTEN 0      4096       127.0.0.1:6060       0.0.0.0:*    users:(("cpolar",pid=2631,fd=8))        
+LISTEN 0      4096       127.0.0.1:631        0.0.0.0:*                                            
+LISTEN 0      4096       127.0.0.1:4040       0.0.0.0:*    users:(("cpolar",pid=2631,fd=9))        
+LISTEN 0      4096            [::]:7474          [::]:*                                            
+LISTEN 0      4096            [::]:7687          [::]:*                                            
+LISTEN 0      4096            [::]:8000          [::]:*                                            
+
+Established external connections (top 10):
+Recv-Q Send-Q  Local Address:Port     Peer Address:Port Process                                  
+0      0      10.193.129.211:37292   36.155.182.76:443   users:(("MainThread",pid=1136088,fd=29))
+0      0      10.193.129.211:52134   116.211.150.7:4443  users:(("cpolar",pid=2631,fd=11))       
+0      0      10.193.129.211:22      10.116.62.192:54025                                         
+0      0      10.193.129.211:22      10.116.62.192:52718                                         
+0      0      10.193.129.211:41710   120.55.98.112:443                                           
+0      0      10.193.129.211:51552    8.153.72.102:443   users:(("claude",pid=1133438,fd=18))    
+0      0      10.193.129.211:37516  36.155.189.158:443   users:(("MainThread",pid=1136088,fd=31))
+0      0      10.193.129.211:36082   160.79.104.10:443   users:(("claude",pid=1133438,fd=19))    
+0      0      10.193.129.211:37914   160.79.104.10:443   users:(("claude",pid=1133438,fd=20))    
+
+World-writable sensitive files (heuristic):
+
+Files with SUID bit (top 10):
+/usr/bin/gpasswd
+/usr/bin/passwd
+/usr/bin/pkexec
+/usr/bin/chfn
+/usr/bin/su
+/usr/bin/mount
+/usr/bin/chsh
+/usr/bin/sudo
+/usr/bin/nvidia-modprobe
+/usr/bin/newgrp
+
+━━━ 系统更新 ━━━
+Pending apt updates: 59
+Listing...
+ca-certificates/noble-updates,noble-security 20260601~24.04.1 all [upgradable from: 20240203]
+cups-bsd/noble-updates,noble-security 2.4.7-1.2ubuntu7.14 arm64 [upgradable from: 2.4.7-1.2ubuntu7.13]
+cups-client/noble-updates,noble-security 2.4.7-1.2ubuntu7.14 arm64 [upgradable from: 2.4.7-1.2ubuntu7.13]
+cups-common/noble-updates,noble-security 2.4.7-1.2ubuntu7.14 all [upgradable from: 2.4.7-1.2ubuntu7.13]
+cups-core-drivers/noble-updates,noble-security 2.4.7-1.2ubuntu7.14 arm64 [upgradable from: 2.4.7-1.2ubuntu7.13]
+cups-daemon/noble-updates,noble-security 2.4.7-1.2ubuntu7.14 arm64 [upgradable from: 2.4.7-1.2ubuntu7.13]
+cups-ipp-utils/noble-updates,noble-security 2.4.7-1.2ubuntu7.14 arm64 [upgradable from: 2.4.7-1.2ubuntu7.13]
+cups-ppdc/noble-updates,noble-security 2.4.7-1.2ubuntu7.14 arm64 [upgradable from: 2.4.7-1.2ubuntu7.13]
+cups-server-common/noble-updates,noble-security 2.4.7-1.2ubuntu7.14 all [upgradable from: 2.4.7-1.2ubuntu7.13]
+⚠️  59 packages need updating — consider 'sudo apt update && sudo apt upgrade'
+
+━━━ 硬件清单 ━━━
+PCI devices:
+0000:00:00.0 PCI bridge: NVIDIA Corporation Device 22ce (rev 01)
+0002:00:00.0 PCI bridge: NVIDIA Corporation Device 22ce (rev 01)
+0004:00:00.0 PCI bridge: NVIDIA Corporation Device 22ce (rev 01)
+0004:01:00.0 Non-Volatile memory controller: Samsung Electronics Co Ltd Device a810
+0007:00:00.0 PCI bridge: NVIDIA Corporation Device 22d0 (rev 01)
+0007:01:00.0 Ethernet controller: Realtek Semiconductor Co., Ltd. Device 8127 (rev 05)
+0009:00:00.0 PCI bridge: NVIDIA Corporation Device 22d0 (rev 01)
+0009:01:00.0 Network controller: MEDIATEK Corp. Device 7925
+000f:00:00.0 PCI bridge: NVIDIA Corporation Device 22d1
+000f:01:00.0 VGA compatible controller: NVIDIA Corporation Device 2e12 (rev a1)
+
+USB devices:
+Bus 001 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
+Bus 001 Device 002: ID 35d6:2510 Bridgesil USB2.1 Hub
+Bus 001 Device 003: ID 214b:7260 Huasheng Electronics USB2.0 HUB
+Bus 001 Device 004: ID 046d:c547 Logitech, Inc. USB Receiver
+Bus 001 Device 005: ID 1908:0226 GEMBIRD MicroSD Card Reader/Writer
+Bus 001 Device 006: ID 046d:c548 Logitech, Inc. Logi Bolt Receiver
+Bus 002 Device 001: ID 1d6b:0003 Linux Foundation 3.0 root hub
+Bus 002 Device 002: ID 35d6:3510 Bridgesil USB3.2 Hub
+Bus 002 Device 003: ID 0bda:8153 Realtek Semiconductor Corp. RTL8153 Gigabit Ethernet Adapter
+Bus 003 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
+
+DMI / SMBIOS:
+（需 sudo 才能完整检测） — try: sudo dmidecode -t system
+
+━━━ 汇总 ━━━
+⚠️  整体状态: NEEDS ATTENTION  (0 critical, 4 warnings)
+
+⚠️  建议 (WARNING):
+  • Memory 93% (>=80%)
+  • 16 distinct error patterns (4485 total) since boot
+  • 1 crash dumps present in /var/crash
+  • 59 pending apt updates

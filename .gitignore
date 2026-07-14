@@ -1,0 +1,22 @@
+# OS junk
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+
+# Editor
+.vscode/
+.idea/
+*.iml
+
+# Local logs and reports (we don't want sample noise in repo)
+*.log
+reports/
+*.out
+
+# ShellCheck
+.shellcheckrc
+
+# Anything user adds locally
+.env
+.env.local
