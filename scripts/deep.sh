@@ -4,6 +4,7 @@
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 # shellcheck source=lib.sh
+# shellcheck source=/etc/os-release
 source "$SCRIPT_DIR/lib.sh"
 
 # Force C locale for stable parsing of lscpu/df/etc output, regardless of user's LANG
@@ -59,7 +60,11 @@ case $? in
   1) warn "Memory ${mem_pct}%"; record warn "Memory ${mem_pct}% (>=80%)";;
   *) ok "Memory ${mem_pct}%";;
 esac
-(( swp_pct >= 50 )) && { warn "Swap ${swp_pct}%"; record warn "Swap ${swp_pct}% (>=50%)"; } || info "Swap ${swp_pct}%"
+if (( swp_pct >= 50 )); then
+  warn "Swap ${swp_pct}%"; record warn "Swap ${swp_pct}% (>=50%)"
+else
+  info "Swap ${swp_pct}%"
+fi
 
 # Hugepages
 if [[ -d /sys/kernel/mm/hugepages ]]; then
@@ -236,9 +241,12 @@ dmesg 2>/dev/null | grep -iE 'segfault|kernel panic|hardware error' | tail -5 ||
 echo
 if command -v journalctl >/dev/null 2>&1; then
   echo "Crash dump files:"
-  crash_count=$(ls /var/crash/*.crash 2>/dev/null | wc -l)
+  crash_count=$(find /var/crash -maxdepth 1 -name '*.crash' 2>/dev/null | wc -l)
   if (( crash_count > 0 )); then
-    ls -lh /var/crash/*.crash 2>/dev/null | head -5
+    find /var/crash -maxdepth 1 -name '*.crash' -printf '%p %s\n' 2>/dev/null \
+      | head -5 | while read -r f s; do
+        printf '  %s  %s\n' "$(numfmt --to=iec "$s" 2>/dev/null || echo "${s}B")" "$(basename "$f")"
+      done
     warn "$crash_count crash dump(s) in /var/crash"
     record warn "$crash_count crash dumps present in /var/crash"
   else

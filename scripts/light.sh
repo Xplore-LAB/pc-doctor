@@ -4,6 +4,7 @@
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 # shellcheck source=lib.sh
+# shellcheck source=/etc/os-release
 source "$SCRIPT_DIR/lib.sh"
 
 # Force C locale for stable parsing of lscpu/df/etc output, regardless of user's LANG

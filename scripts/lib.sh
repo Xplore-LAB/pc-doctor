@@ -127,8 +127,7 @@ need_tool() {
 }
 
 # ---------- Threshold judges ----------
-# Returns 0=ok, 1=warn, 2=crit. Sets HC_LAST_STATUS.
-declare -i HC_LAST_STATUS=0
+# Returns 0=ok, 1=warn, 2=crit.
 declare -ga HC_WARNINGS=()
 declare -ga HC_CRITICALS=()
 
@@ -201,6 +200,7 @@ bytes_to_human() {
 # ---------- Entry banner ----------
 banner() {
   local mode="$1"   # light | deep
+  # shellcheck disable=SC2059  # intentional: ANSI codes in format string
   printf "${C_HEAD}${C_BOLD}"
   printf "╔════════════════════════════════════════════════════════════╗\n"
   printf "║  %-58s ║\n" "$(t title)"
@@ -208,5 +208,6 @@ banner() {
   printf "║  Host: %-52s ║\n" "$(hostname 2>/dev/null || echo unknown)"
   printf "║  Time: %-52s ║\n" "$(date '+%Y-%m-%d %H:%M:%S %Z')"
   printf "╚════════════════════════════════════════════════════════════╝\n"
+  # shellcheck disable=SC2059  # intentional: ANSI codes in format string
   printf "${C_RESET}\n"
 }
