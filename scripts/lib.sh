@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# lib.sh - Shared helpers for healthcheck skill
+# lib.sh - Shared helpers for pc-doctor skill
 # Source this file from light.sh / deep.sh
 #
 # Provides:

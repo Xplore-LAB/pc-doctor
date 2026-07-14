@@ -1,4 +1,4 @@
-# Contributing to Claude PC Doctor / 贡献指南
+# Contributing to PC Doctor / 贡献指南
 
 Thanks for helping make computer diagnostics easier for everyone.
 感谢你帮大家把电脑诊断变得更容易。
@@ -6,8 +6,8 @@ Thanks for helping make computer diagnostics easier for everyone.
 ## Quick start / 快速上手
 
 ```bash
-git clone https://github.com/YOUR_USER/claude-pc-doctor.git
-cd claude-pc-doctor
+git clone https://github.com/YOUR_USER/pc-doctor.git
+cd pc-doctor
 bash scripts/light.sh       # ~30s
 bash scripts/deep.sh        # ~3-5min
 ```

@@ -1,4 +1,4 @@
-# Claude PC Doctor 🩺💻
+# PC Doctor 🩺💻
 
 > 为 Claude Code 设计的中英双语电脑体检 skill。两种模式，零依赖，零网络调用（除连通性 ping 外）。
 >
@@ -24,16 +24,16 @@
 ### 方式一：作为 Claude Code skill（推荐）
 
 ```bash
-git clone https://github.com/xplore-lab/claude-pc-doctor.git \
-  ~/.claude/skills/healthcheck
+git clone https://github.com/xplore-lab/pc-doctor.git \
+  ~/.claude/skills/pc-doctor
 ```
 
 然后在 Claude Code 里直接说：
 
 ```
-/healthcheck         # 轻量
-/healthcheck --deep  # 深度
-/healthcheck deep    # 也行
+/pc-doctor         # 轻量
+/pc-doctor --deep  # 深度
+/pc-doctor deep    # 也行
 ```
 
 Claude 会自动选对应脚本并用你偏好的语言汇总结果。
@@ -41,8 +41,8 @@ Claude 会自动选对应脚本并用你偏好的语言汇总结果。
 ### 方式二：独立 CLI
 
 ```bash
-git clone https://github.com/xplore-lab/claude-pc-doctor.git
-cd claude-pc-doctor
+git clone https://github.com/xplore-lab/pc-doctor.git
+cd pc-doctor
 bash scripts/light.sh       # 或 deep.sh
 bash scripts/light.sh zh    # 强制中文
 bash scripts/deep.sh  en    # 强制英文
@@ -136,7 +136,7 @@ Swap:          15Gi       5.2Gi        10Gi
 ## 项目结构
 
 ```
-claude-pc-doctor/
+pc-doctor/
 ├── SKILL.md                          ← skill 入口（中英双语）
 ├── README.md                         ← 英文说明
 ├── README.zh-CN.md                   ← 本文件

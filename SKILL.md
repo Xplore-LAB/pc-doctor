@@ -1,11 +1,11 @@
 ---
-name: healthcheck
+name: pc-doctor
 description: |
   Computer health check for Linux systems. Inspects CPU, memory, disks,
   filesystem, processes, network, services, temperatures, SMART, security,
   and pending updates. Two modes: --light (≈30s) and --deep (≈3-5min).
   Use when user asks to "check my computer", "run a health check",
-  "diagnose my machine", "why is my computer slow", "体检", "电脑体检",
+  "diagnose my machine", "why is my computer slow", "体检", "电脑体检", "跑个 pc-doctor",
   "跑个健康检查", or any computer-diagnostics request.
 metadata:
   language: en | zh
@@ -15,14 +15,14 @@ metadata:
     - deep
 ---
 
-# healthcheck / 电脑体检
+# pc-doctor / 电脑体检
 
 A bilingual (English / 中文) computer health check skill for Claude Code.
-One skill, two modes — invoked by the user as `/healthcheck` (light) or
-`/healthcheck --deep` (thorough).
+One skill, two modes — invoked by the user as `/pc-doctor` (light) or
+`/pc-doctor --deep` (thorough).
 
 为 Claude Code 设计的中英双语电脑体检 skill。一个 skill、两种模式：
-`/healthcheck`（轻量，约 30 秒）和 `/healthcheck --deep`（深度，约 3-5 分钟）。
+`/pc-doctor`（轻量，约 30 秒）和 `/pc-doctor --deep`（深度，约 3-5 分钟）。
 
 ---
 
@@ -31,7 +31,7 @@ One skill, two modes — invoked by the user as `/healthcheck` (light) or
 Invoke when the user asks ANY of:
 - "check my computer health" / "run a health check" / "diagnose my machine"
 - "why is my computer slow" / "what's wrong with my laptop"
-- "体检" / "电脑体检" / "健康检查" / "诊断一下" / "跑个 healthcheck"
+- "体检" / "电脑体检" / "健康检查" / "诊断一下" / "跑个 pc-doctor" / "看看电脑"
 - "看一下内存/CPU/磁盘" / "帮我查一下电脑"
 - "free up disk space" (use light first to find what's full)
 
@@ -46,7 +46,7 @@ Invoke when the user asks ANY of:
 
 ### Light mode (default, ~30 seconds)
 ```bash
-bash ~/.claude/skills/healthcheck/scripts/light.sh
+bash ~/.claude/skills/pc-doctor/scripts/light.sh
 ```
 Or, when running from the repo:
 ```bash
@@ -57,16 +57,16 @@ Auto-detects from `$LANG` if not provided.
 
 ### Deep mode (~3-5 minutes)
 ```bash
-bash ~/.claude/skills/healthcheck/scripts/deep.sh
+bash ~/.claude/skills/pc-doctor/scripts/deep.sh
 ```
 Some checks (SMART details, DMI) may need `sudo` for full output — the
 script will print a notice and skip what it can't access.
 
 ### From a Claude Code conversation
 The user can simply say:
-- `/healthcheck` → runs light mode
-- `/healthcheck deep` → runs deep mode
-- `/healthcheck --deep` → also runs deep mode
+- `/pc-doctor` → runs light mode
+- `/pc-doctor deep` → runs deep mode
+- `/pc-doctor --deep` → also runs deep mode
 
 You (Claude) should:
 1. Confirm the mode: light or deep

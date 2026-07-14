@@ -1,4 +1,4 @@
-# Claude PC Doctor 🩺💻
+# PC Doctor 🩺💻
 
 > A bilingual computer health check skill for Claude Code. Two modes, zero dependencies, zero network calls (except connectivity ping).
 >
@@ -28,16 +28,16 @@ would rather under-warn than cry wolf.
 ### Option 1: As a Claude Code skill (recommended)
 
 ```bash
-git clone https://github.com/xplore-lab/claude-pc-doctor.git \
-  ~/.claude/skills/healthcheck
+git clone https://github.com/xplore-lab/pc-doctor.git \
+  ~/.claude/skills/pc-doctor
 ```
 
 Then in Claude Code just type:
 
 ```
-/healthcheck         # light mode
-/healthcheck --deep  # deep mode
-/healthcheck deep    # also works
+/pc-doctor         # light mode
+/pc-doctor --deep  # deep mode
+/pc-doctor deep    # also works
 ```
 
 Claude will pick the right script and summarize the output for you in your
@@ -46,8 +46,8 @@ preferred language.
 ### Option 2: Standalone CLI
 
 ```bash
-git clone https://github.com/xplore-lab/claude-pc-doctor.git
-cd claude-pc-doctor
+git clone https://github.com/xplore-lab/pc-doctor.git
+cd pc-doctor
 bash scripts/light.sh       # or deep.sh
 bash scripts/light.sh zh    # force Chinese output
 bash scripts/deep.sh  en    # force English output
@@ -148,7 +148,7 @@ behind every number.
 ## Project structure / 项目结构
 
 ```
-claude-pc-doctor/
+pc-doctor/
 ├── SKILL.md                          ← main skill entrypoint (bilingual)
 ├── README.md                         ← this file (English)
 ├── README.zh-CN.md                   ← 中文版说明
